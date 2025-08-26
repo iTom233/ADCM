@@ -1953,3 +1953,933 @@
 25-08-19.23:19|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 8
 25-08-19.23:19|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 4064.925890042998
 25-08-19.23:19|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 88.51204734828441
+25-08-26.20:10|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:10|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:10|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:10|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:10|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:10|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:11|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:11|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:11|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:11|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:11|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:11|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:16|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:16|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:16|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:16|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:16|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:16|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:20|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:20|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:20|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:20|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:20|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:20|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.831589221954346
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2529.8742822300856
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [2634.022402830079, 2425.7261616300925]
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 104.14812059999326
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 650.5
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [699, 602]
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 48.5
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 55.07354542802063
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] time/total: 49.2335000038147
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 18.399909257888794
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.221435205750167
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5690390208801595
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.1562715768814087
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2529.8742822300856
+25-08-26.20:21|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 55.07354542802063
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.32691240310669
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 3923.3487998161486
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [3768.0514999549146, 4078.6460996773826]
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 155.29729986123402
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 958.5
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [917, 1000]
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 41.5
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 85.42802999061337
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] time/total: 105.76769781112671
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 26.184284925460815
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7934816778078675
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4037937033003554
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.6155991554260254
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3923.3487998161486
+25-08-26.20:22|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 85.42802999061337
+25-08-26.20:25|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:25|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:25|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:25|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:25|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:25|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.54679560661316
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2077.9351362912857
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [2225.0049153729074, 1930.8653572096641]
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 147.06977908162162
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 572.5
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [574, 571]
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 1.5
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 45.2288158290932
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] time/total: 45.71475434303284
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 15.166089296340942
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.221435205750167
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5690390208801595
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.1562715768814087
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2077.9351362912857
+25-08-26.20:26|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 45.2288158290932
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.248316287994385
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2710.93764350814
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1646.3498868602467, 3775.525400156033]
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1064.587756647893
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 737.5
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [475, 1000]
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 262.5
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 59.0177043885209
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] time/total: 96.51079940795898
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 20.525760650634766
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7935157614946364
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4036316295300362
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.6146140098571777
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2710.93764350814
+25-08-26.20:27|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 59.0177043885209
+25-08-26.20:34|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:34|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:34|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:34|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:34|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:34|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.848554372787476
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 3563.9569367609492
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [3481.943626828553, 3645.9702466933454]
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 82.01330993239617
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 912.0
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [951, 873]
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 39.0
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 77.59928635637125
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] time/total: 56.088184118270874
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 25.237629890441895
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.221435205750167
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5690390208801595
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.1562715768814087
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3563.9569367609492
+25-08-26.20:35|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 77.59928635637125
+25-08-26.20:41|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:41|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:41|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:41|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:41|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:41|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] time/training: 31.091838121414185
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1795.1411036177067
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1318.3232399833305, 2271.958967252083]
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 476.8178636343762
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 467.0
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [367, 567]
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 100.0
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 39.06862632375957
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] time/total: 44.254899978637695
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 13.161074161529541
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.221435205750167
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5690390208801595
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.1562715768814087
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 1795.1411036177067
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 39.06862632375957
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.352001190185547
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2746.3580048370673
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1375.3277965030536, 4117.388213171081]
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1371.0302083340137
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 720.0
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [440, 1000]
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 280.0
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 59.789277027698326
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] time/total: 95.48060154914856
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 20.85056710243225
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7935506112128494
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4037149750384086
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.6145737171173096
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2746.3580048370673
+25-08-26.20:42|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 59.789277027698326
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.47186517715454
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1459.338871861867
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1484.0207280450888, 1434.657015678645]
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 24.681856183221953
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 417.0
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [422, 412]
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 5.0
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 31.75374289297068
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] time/total: 137.26845955848694
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 11.294029712677002
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.960436486341059
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5050888648545804
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.4011449813842773
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2746.3580048370673
+25-08-26.20:43|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 59.789277027698326
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.869208097457886
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2831.3114924886104
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [3313.243851957525, 2349.379133019696]
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 481.93235946891446
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 698.5
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [796, 601]
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 97.5
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 61.63984501219534
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] time/total: 50.88318681716919
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 20.011940240859985
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.221435205750167
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5690390208801595
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.1562715768814087
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2831.3114924886104
+25-08-26.20:46|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 61.63984501219534
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] time/training: 30.494033575057983
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 3853.870278438735
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [3706.1813459278246, 4001.5592109496456]
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 147.6889325109105
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 1000.0
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [1000, 1000]
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 0.0
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 83.9145579622652
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] time/total: 109.28558897972107
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 27.888368368148804
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7936062824726107
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4037123352830048
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.615617036819458
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3853.870278438735
+25-08-26.20:47|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 83.9145579622652
+25-08-26.20:52|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:52|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:52|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:52|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:52|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:52|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:53|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:53|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:53|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:53|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:53|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:53|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.012598276138306
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 3015.7213174937656
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [2406.859848791437, 3624.5827861960943]
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 608.8614687023287
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 841.5
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [683, 1000]
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 158.5
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 65.65690102266788
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] time/total: 59.77142643928528
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 25.756821155548096
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3015.7213174937656
+25-08-26.20:54|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 65.65690102266788
+25-08-26.20:55|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:55|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:55|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:55|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:55|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:55|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.07011580467224
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1167.0637213327873
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1669.014515925952, 665.1129267396224]
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 501.95079459316486
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 359.0
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [476, 242]
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 117.0
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 25.38702327750669
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] time/total: 45.51388168334961
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 11.440781354904175
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 1167.0637213327873
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 25.38702327750669
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.36415147781372
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1266.810531708862
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1637.7172299702045, 895.9038334475194]
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 370.9066982613425
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 362.0
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [429, 295]
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 67.0
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 27.55983876678701
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] time/total: 89.46000385284424
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 10.560970783233643
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7951835000142453
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.403769452384583
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.616131544113159
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 1266.810531708862
+25-08-26.20:56|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 27.55983876678701
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.454737186431885
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1762.1905359894236
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [2120.225915221017, 1404.15515675783]
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 358.03537923159365
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 473.5
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [550, 397]
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 76.5
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 38.350853961381496
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] time/total: 137.2600700855255
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 14.325329303741455
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.961247949525714
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5051486055043746
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.4020650386810303
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 3
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 1762.1905359894236
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 38.350853961381496
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.20:57|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.15885639190674
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2131.8449191423324
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [564.4179000074274, 3699.2719382772375]
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1567.427019134905
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 620.5
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [241, 1000]
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 379.5
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 46.403149231443166
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] time/total: 52.666735887527466
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 18.50533175468445
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2131.8449191423324
+25-08-26.20:58|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 46.403149231443166
+25-08-26.21:04|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:04|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:04|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:04|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:04|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:04|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.20624899864197
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 3338.2923055563538
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [3609.1970050865475, 3067.38760602616]
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 270.90469953019374
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 900.0
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [1000, 800]
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 100.0
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 72.68356419728268
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] time/total: 62.15988230705261
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 27.95063066482544
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3338.2923055563538
+25-08-26.21:05|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 72.68356419728268
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.545616149902344
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2512.449942198412
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [3301.2861845841035, 1723.6136998127204]
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 788.8362423856915
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 624.0
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [798, 450]
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 174.0
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 54.69398566296584
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] time/total: 114.83124208450317
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 19.10474443435669
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.795214052312076
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4039290629711767
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.6165108680725098
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3338.2923055563538
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 72.68356419728268
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.58894968032837
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1314.4649475422207
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1335.601703093215, 1293.328191991226]
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 21.136755550994508
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 372.5
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [370, 375]
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 2.5
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 28.597909582935767
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] time/total: 159.98755025863647
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 11.564357995986938
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.9612426418997346
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5051777281163465
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.4000110626220703
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3338.2923055563538
+25-08-26.21:06|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 72.68356419728268
+25-08-26.21:08|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:08|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:08|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:08|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:08|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:08|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.304497957229614
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1621.0149302120412
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1114.0011742940933, 2128.028686129989]
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 507.01375591794795
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 468.0
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [360, 576]
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 108.0
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 35.27558226311769
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] time/total: 49.35411071777344
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 15.047612190246582
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 1621.0149302120412
+25-08-26.21:09|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 35.27558226311769
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.45987319946289
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 889.9802402147521
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1253.403609353877, 526.5568710756272]
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 363.42336913912493
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 313.5
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [394, 233]
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 80.5
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 19.351228475376484
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] time/total: 92.37475037574768
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 9.539766073226929
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.795194653682411
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4038649184855803
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.616929531097412
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 1621.0149302120412
+25-08-26.21:10|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 35.27558226311769
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.46364498138428
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1444.4288165387086
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [2176.5249875681166, 712.3326455093005]
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 732.096171029408
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 421.5
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [586, 257]
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 164.5
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 31.428952566041534
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] time/total: 138.34501576423645
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 12.503572463989258
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.9612507833726704
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5051631092075934
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.4001357555389404
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 1621.0149302120412
+25-08-26.21:11|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 35.27558226311769
+25-08-26.21:13|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:13|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:13|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:13|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:13|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:13|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.14142966270447
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2186.7244089064975
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [989.3812830583897, 3384.0675347546053]
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1197.3431258481078
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 632.5
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [325, 940]
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 307.5
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 47.59860605812061
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] time/total: 53.66692352294922
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 19.523494482040405
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2186.7244089064975
+25-08-26.21:14|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 47.59860605812061
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.275197982788086
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 3674.7441997336555
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [4357.700893338488, 2991.7875061288228]
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 682.9566936048325
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 864.5
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [1000, 729]
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 135.5
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 80.01259942467372
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] time/total: 112.87723112106323
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 25.914204835891724
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7952202659100296
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4038256599116035
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.6164333820343018
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3674.7441997336555
+25-08-26.21:15|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 80.01259942467372
+25-08-26.21:17|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:17|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:17|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:17|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:17|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:17|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.003636598587036
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2112.4653542678284
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [657.7921414249338, 3567.1385671107228]
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1454.6732128428944
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 619.5
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [239, 1000]
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 380.5
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 45.980998201489676
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] time/total: 53.28248190879822
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 19.276625871658325
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2112.4653542678284
+25-08-26.21:18|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 45.980998201489676
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.28894281387329
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 3041.0115728183
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1862.5438368969603, 4219.47930873964]
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1178.46773592134
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 731.0
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [469, 993]
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 262.0
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 66.20780644299982
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] time/total: 109.28497743606567
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 22.69253182411194
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7950873535871508
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4038897736392564
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.615867853164673
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3041.0115728183
+25-08-26.21:19|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 66.20780644299982
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.18036413192749
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1525.7539830166404
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [884.4997692971283, 2167.0081967361525]
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 641.2542137195121
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 429.0
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [296, 562]
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 133.0
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 33.20048371300576
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] time/total: 155.85915613174438
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 13.373815536499023
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.9611912553943696
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5051342881033811
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.400336980819702
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3041.0115728183
+25-08-26.21:20|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 66.20780644299982
+25-08-26.21:21|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:21|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:21|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:21|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:21|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:21|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.076669454574585
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2575.3456561054063
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1530.8549096891657, 3619.8364025216474]
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1044.4907464162409
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 726.5
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [453, 1000]
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 273.5
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 56.06406236888968
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] time/total: 56.330620765686035
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 22.252198934555054
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2575.3456561054063
+25-08-26.21:22|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 56.06406236888968
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.4119598865509
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1031.4874954293891
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [774.553815305406, 1288.4211755533724]
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 256.9336801239832
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 321.5
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [267, 376]
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 54.5
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 22.433724595469528
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] time/total: 100.26454138755798
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 10.501961469650269
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7951864893734455
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4037889333189875
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.6158697605133057
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2575.3456561054063
+25-08-26.21:23|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 56.06406236888968
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.48966670036316
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 1956.455231191872
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1879.4836080701916, 2033.426854313552]
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 76.97162312168018
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 501.0
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [489, 513]
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 12.0
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 42.58258164434955
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] time/total: 149.82249641418457
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 16.066290140151978
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.9613570763915775
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5052412806567121
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.400907516479492
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2575.3456561054063
+25-08-26.21:24|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 56.06406236888968
+25-08-26.21:25|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:25|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:25|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:25|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:25|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:25|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] time/training: 34.28776550292969
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2055.8064170845437
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [635.6888634673463, 3475.923970701741]
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1420.1175536171972
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 612.5
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [225, 1000]
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 387.5
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 44.746779123668105
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] time/total: 53.51438808441162
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 19.224625825881958
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2055.8064170845437
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 44.746779123668105
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.485997915267944
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2335.1149006358364
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [556.00068563433, 4114.229115637343]
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1779.1142150015066
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 617.0
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [234, 1000]
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 383.0
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 50.831041839032245
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] time/total: 105.86392521858215
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 18.843533754348755
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.7951978115737437
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4038890226732654
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.6160850524902344
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2335.1149006358364
+25-08-26.21:26|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 50.831041839032245
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.41889429092407
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2415.508495169734
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [793.270837290642, 4037.746153048826]
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1622.2376578790918
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 613.0
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [274, 952]
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 339.0
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 52.58228026744492
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] time/total: 158.5402934551239
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 19.235475540161133
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.961299964990467
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.505121617143481
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.399911880493164
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 3
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2415.508495169734
+25-08-26.21:27|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 52.58228026744492
+25-08-26.21:30|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:30|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:30|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:30|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:30|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:30|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.91113996505737
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2593.068229509141
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1393.2622671104905, 3792.8741919077916]
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1199.8059623986505
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 731.5
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [463, 1000]
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 268.5
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 56.4501186433345
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] time/total: 57.35698366165161
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 23.442842721939087
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.2252738709002733
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5711785842213388
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 0.15969818830490112
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2593.068229509141
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 56.4501186433345
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] time/training: 33.39115023612976
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2350.426163117444
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1131.1022536607513, 3569.750072574137]
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 1219.3239094566927
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 573.5
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [326, 821]
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 247.5
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 51.164571785052985
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] time/total: 108.22088623046875
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 17.452752590179443
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.795127235129476
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.403843922693722
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.6166560649871826
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2593.068229509141
+25-08-26.21:31|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 56.4501186433345
+25-08-26.21:34|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:34|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:34|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:34|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:34|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:34|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:35|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:35|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:35|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:35|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:35|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:35|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:36|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:36|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:36|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:36|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:36|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:36|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:40|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:40|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:40|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:40|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:40|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:40|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:47|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:47|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:47|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:47|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:47|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:47|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:48|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:48|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:48|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:48|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:48|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:48|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/training: 4.046879053115845
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 333.13110223679394
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [326.29042752947583, 339.971776944112]
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 6.8406747073180725
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 175.5
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [156, 195]
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 19.5
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 7.221212210905353
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/total: 9.502853393554688
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 5.452972650527954
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 4.1444219052791595
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.773145529938631
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.3248119354248047
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 333.13110223679394
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 7.221212210905353
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/training: 3.4218130111694336
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 389.8071372895067
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [404.7652485590064, 374.849026020007]
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 14.95811126949971
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 203.0
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [212, 194]
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 9.0
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 8.455803736882277
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/total: 19.473487615585327
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 6.526817321777344
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.5028189167380335
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5616773889772955
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.237952947616577
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 2
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 389.8071372895067
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 8.455803736882277
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/training: 3.51021409034729
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 425.6075367272713
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [436.1051080936452, 415.10996536089743]
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 10.497571366373876
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 210.0
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [209, 211]
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 1.0
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 9.235654863224212
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/total: 29.48172163963318
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 6.477999925613403
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.6405363127589228
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4950063473566788
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.535780429840088
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 3
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 425.6075367272713
+25-08-26.21:49|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 9.235654863224212
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/training: 4.207347393035889
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 396.24419763251836
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [408.1034155211637, 384.38497974387303]
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 11.859217888645333
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 207.0
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [206, 208]
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 1.0
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 8.596024204744802
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/total: 11.113081932067871
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 6.903694152832031
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 4.1444219052791595
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.773145529938631
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.3248119354248047
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 396.24419763251836
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 8.596024204744802
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Iteration 2
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/training: 3.484107494354248
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 364.0028257351124
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [369.1984395304887, 358.80721193973613]
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 5.195613795376289
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 194.5
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [197, 192]
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 2.5
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 7.893700471382255
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/total: 20.753188371658325
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 6.132999658584595
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.5072779819369315
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5643300396883757
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.24707293510437
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 396.24419763251836
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 8.596024204744802
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Iteration 3
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/training: 3.4292221069335938
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 305.1490587784713
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [187.52884744103147, 422.7692701159111]
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 117.62021133743983
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 205.0
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [233, 177]
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 28.0
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 6.611670740669608
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/total: 32.07311964035034
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 7.88670802116394
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 3.6508071288466453
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.5008119092724235
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 3.5443804264068604
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 396.24419763251836
+25-08-26.21:52|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 8.596024204744802
+25-08-26.22:05|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.22:05|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.22:05|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.22:05|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.22:05|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.22:05|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] time/training: 330.9225027561188
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 3875.125439099738
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [4218.198529896358, 3532.0523483031175]
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 343.07309079662036
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 910.0
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [1000, 820]
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 90.0
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 84.37756567286009
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] time/total: 358.61289620399475
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 27.68735694885254
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.9115097555220126
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4706442443556291
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 4.97213077545166
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 3875.125439099738
+25-08-26.22:11|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 84.37756567286009
+25-08-26.22:16|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.22:16|[gym-experiment-walker2d-medium-replay-154907] Starting new experiment: walker2d medium-replay
+25-08-26.22:16|[gym-experiment-walker2d-medium-replay-154907] 1093 trajectories, 302000 timesteps found
+25-08-26.22:16|[gym-experiment-walker2d-medium-replay-154907] Average return: 482.70, std: 895.96
+25-08-26.22:16|[gym-experiment-walker2d-medium-replay-154907] Max return: 3932.00, min: -250.20
+25-08-26.22:16|[gym-experiment-walker2d-medium-replay-154907] ==================================================
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] ================================================================================
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] Iteration 1
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] time/training: 166.55982112884521
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_mean: 2673.9742610998724
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_detail: [1708.2243666521626, 2396.203837127141, 3319.9308273899464, 1904.24582184127, 2414.371351415485, 2551.8919256288814, 2857.6163360923797, 4252.929915267791, 1960.9431722096017, 3373.385057374064]
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_return_std: 750.0855254804275
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_mean: 668.4
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_detail: [463, 603, 787, 510, 610, 658, 713, 1000, 520, 820]
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_length_std: 156.87396214796132
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] evaluation/target_5000_normalized_score: 58.21251964597057
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] time/total: 268.668790102005
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] time/evaluation: 102.10696721076965
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_mean: 2.9503879300132394
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] training/train_loss_std: 1.4828799602226082
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] training/action_error: 2.7697885036468506
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] ----------------------------------------Best_Iteration: 1
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] Best_return_mean: 2673.9742610998724
+25-08-26.22:21|[gym-experiment-walker2d-medium-replay-154907] Best_normalized_score: 58.21251964597057

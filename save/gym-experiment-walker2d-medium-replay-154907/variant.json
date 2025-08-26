@@ -11,7 +11,6 @@
   "learning_rate": 0.001,
   "max_iters": 50,
   "mode": "normal",
-  "model_type": "pmd",
   "n_layer": 1,
   "num_eval_episodes": 10,
   "num_steps_per_iter": 2000,

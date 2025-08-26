@@ -9,14 +9,12 @@ import d4rl
 import sys
 sys.path.append('../')
 sys.path.append('./')
+
 # 评估函数
-from src.evaluation.evaluate_episodes import evaluate_episode, evaluate_episode_rtg
+from src.evaluation.evaluate_episodes import evaluate_episode_rtg
 # 序列建模模型
-from src.models.PMD import PatchMoEDecision
+from models.ADCM import Advantage_Decision_ConvMamba
 from src.training.trainer import SequenceTrainer
-#行为模仿模型
-from src.models.seq_models import MLPBCModel
-from src.training.trainer import ActTrainer
 
 # 加载IQL模块 
 from src.models.iql import pre_train_IQL, TwinQ, ValueFunction
@@ -37,18 +35,6 @@ def set_seed(seed):
         torch.backends.cudnn.deterministic = True
         torch.backends.cudnn.benchmark = False
 
-# 检查CUDA是否可用
-cuda_available = torch.cuda.is_available()
-print(f"CUDA is available: {cuda_available}")
-
-# 如果CUDA可用，获取CUDA设备的数量
-if cuda_available:
-    num_gpus = torch.cuda.device_count()
-    print(f"Number of CUDA devices available: {num_gpus}")
-    # 列出所有CUDA设备及其名称
-    for i in range(num_gpus):
-        print(f"CUDA device {i}: {torch.cuda.get_device_name(i)}")
-
 def discount_cumsum(x, gamma):
     discount_cumsum = np.zeros_like(x)
     discount_cumsum[-1] = x[-1]
@@ -62,18 +48,19 @@ def experiment(
 ):
     seed = variant['seed']
     set_seed(seed)
+
     lambda_param = variant['lambda_param']
+    result_path = variant['result_path']
     device = variant.get('device', 'cuda')
     env_name, dataset = variant['env'], variant['dataset']
-    model_type = variant['model_type']
     group_name = f'{exp_prefix}-{env_name}-{dataset}'
     exp_prefix = f'{group_name}-{random.randint(int(1e5), int(1e6) - 1)}'
 
+    # 1 env init
     if env_name == 'hopper':
         dversion = 2
         gym_name = f'{env_name}-{dataset}-v{dversion}'
         env = gym.make(gym_name)
-        # env.seed(42)
         max_ep_len = 1000
         env_targets = [7200, 3600]  # evaluation conditioning targets
         scale = 1000.  # normalization for rewards/returns
@@ -89,7 +76,8 @@ def experiment(
         gym_name = f'{env_name}-{dataset}-v{dversion}'
         env = gym.make(gym_name)
         max_ep_len = 1000
-        env_targets = [10000, 5000]
+        # env_targets = [10000, 5000]
+        env_targets = [5000]
         scale = 1000.
     elif env_name == 'maze2d':
         if 'open' in dataset:
@@ -108,46 +96,9 @@ def experiment(
         if dataset == 'umaze':
             env_targets = [300]
             scale = 100.
-    elif env_name == 'door':
-        dversion = 1
-        gym_name = f'{env_name}-{dataset}-v{dversion}'
-        env = gym.make(gym_name)
-        max_ep_len = 1000
-        env_targets = [2000, 1000, 500]
-        scale = 500
-    elif env_name == 'kitchen':
-        dversion = 0
-        gym_name = f'{env_name}-{dataset}-v{dversion}'
-        env = gym.make(gym_name)
-        max_ep_len = 1000
-        env_targets = [300]
-        scale = 100.
-    elif env_name == 'pen':
-        dversion = 1
-        gym_name = f'{env_name}-{dataset}-v{dversion}'
-        env = gym.make(gym_name)
-        max_ep_len = 1000
-        env_targets = [12000, 6000, 3000]
-        scale = 3000.
-    elif env_name == 'hammer':
-        dversion = 1
-        gym_name = f'{env_name}-{dataset}-v{dversion}'
-        env = gym.make(gym_name)
-        max_ep_len = 1000
-        env_targets = [12000, 6000, 3000]
-        scale = 3000.
-    elif env_name == 'antmaze':
-        dversion = 0
-        gym_name = f'{env_name}-{dataset}-v{dversion}'
-        env = gym.make(gym_name)
-        max_ep_len = 1000
-        env_targets = [1.]
-        scale = 1.
     else:
         raise NotImplementedError
 
-    if model_type == 'bc':
-        env_targets = env_targets[:1]  # since BC ignores target, no need for different evaluations
     if not os.path.exists(os.path.join(variant['result_path'], exp_prefix)):
         pathlib.Path(
         variant['result_path'] +
@@ -159,8 +110,9 @@ def experiment(
     state_dim = env.observation_space.shape[0]
     act_dim = env.action_space.shape[0]
 
-    # load dataset
-    dataset_path = f'C:/Users/24737/Desktop/fsdownload/ADCM_0806/data/{env_name}-{dataset}-v{+dversion}.pkl'
+
+    # 2 load dataset
+    dataset_path = f'../data/{env_name}-{dataset}-v{+dversion}.pkl'
     with open(dataset_path, 'rb') as f:
         trajectories = pickle.load(f)
     # save all path information into separate lists
@@ -172,7 +124,7 @@ def experiment(
             path['rewards'][-1] = path['rewards'].sum()
             path['rewards'][:-1] = 0
         else:
-            if 'maze2d' not in env_name and 'ant' not in env_name:
+            if 'maze2d' not in env_name:
                 path['rewards'][-1] -= 200
         states.append(path['observations'])
         traj_lens.append(len(path['observations']))
@@ -212,7 +164,7 @@ def experiment(
     # used to reweight sampling so we sample according to timesteps instead of trajectories
     p_sample = traj_lens[sorted_inds] / sum(traj_lens[sorted_inds])
 
-    def get_batch(batch_size=256, max_len=K):
+    def get_batch(batch_size=batch_size, max_len=K):
         batch_inds = np.random.choice(
             np.arange(num_trajectories),
             size=batch_size,
@@ -259,38 +211,26 @@ def experiment(
         mask = torch.from_numpy(np.concatenate(mask, axis=0)).to(device=device)
 
         return s, a, r, d, rtg, timesteps, mask
+    
+    # eval_episodes
     def eval_episodes(target_rew):
         def fn(model):
             returns, lengths = [], []
             for _ in trange(num_eval_episodes,desc="Evaluation", leave=False):
                 with torch.no_grad():
-                    if model_type == 'pmd':
-                        ret, length = evaluate_episode_rtg(
-                            env,
-                            state_dim,
-                            act_dim,
-                            model,
-                            max_ep_len=max_ep_len,
-                            scale=scale,
-                            target_return=target_rew/scale,
-                            mode=mode,
-                            state_mean=state_mean,
-                            state_std=state_std,
-                            device= device
-                        )
-                    else:
-                        ret, length = evaluate_episode(
-                            env,
-                            state_dim,
-                            act_dim,
-                            model,
-                            max_ep_len=max_ep_len,
-                            target_return=target_rew/scale,
-                            mode=mode,
-                            state_mean=state_mean,
-                            state_std=state_std,
-                            device=device,
-                        )
+                    ret, length = evaluate_episode_rtg(
+                        env,
+                        state_dim,
+                        act_dim,
+                        model,
+                        max_ep_len=max_ep_len,
+                        scale=scale,
+                        target_return=target_rew/scale,
+                        mode=mode,
+                        state_mean=state_mean,
+                        state_std=state_std,
+                        device= device
+                    )
                 returns.append(ret)
                 lengths.append(length)
             result = {
@@ -301,71 +241,38 @@ def experiment(
                 f'target_{target_rew}_length_detail': lengths,
                 f'target_{target_rew}_length_std': np.std(lengths),
             }
-            if env_name == 'hopper':
-                result[f'target_{target_rew}_normalized_score'] =  env.get_normalized_score(np.mean(returns))*100
-            if env_name == 'walker2d':
-                result[f'target_{target_rew}_normalized_score'] = ((np.mean(returns)-(1.629008)) / (4592.3-(1.629008)))*100
-            if env_name == 'halfcheetah':
-                result[f'target_{target_rew}_normalized_score'] = ((np.mean(returns)-(-280.178953)) / (12135.0-(-280.178953)))*100
-            if env_name == 'antmaze':
-                result[f'target_{target_rew}_normalized_score'] = ((np.mean(returns)-(0.0)) / (1.0-(0.0)))*100
-            if env_name == 'door':
-                result[f'target_{target_rew}_normalized_score'] = ((np.mean(returns)-(-56.512833)) / (2880.5693087298737-(-56.512833)))*100
-            if env_name == 'pen':
-                result[f'target_{target_rew}_normalized_score'] = ((np.mean(returns)-(96.262799)) / (3076.8331017826877-(96.262799)))*100
-            if env_name == 'hammer':
-                result[f'target_{target_rew}_normalized_score'] = ((np.mean(returns)-(-274.856578)) / (12794.134825156867-(-274.856578)))*100
-            if env_name == 'kitchen':
-                result[f'target_{target_rew}_normalized_score'] = ((np.mean(returns)-(0.0)) / (4.0-(0.0)))*100
-            if env_name == 'maze2d':
-                result[f'target_{target_rew}_normalized_score'] = env.get_normalized_score(np.mean(returns))*100
+            result[f'target_{target_rew}_normalized_score'] =  env.get_normalized_score(np.mean(returns))*100
             return result
         return fn
     
-    #用IQL预训练Q和V
-    #从新开始预训练
+    #  Critic
+    # 从新开始预训练
     # Q_fun, V_fun = pre_train_IQL(device=device, env=gym_name, seed=123, max_timesteps=int(2.5e5), eval_freq=int(5e4))
-    #可以直接加载预训练模型
+
+    # 可以直接加载预训练模型
     Q_fun = TwinQ(state_dim, act_dim, hidden_dim=256, n_hidden=2).to(device=device)
-    V_fun = ValueFunction(state_dim, hidden_dim=256, n_hidden=2).to(device=device)
     Q_fun.load_state_dict(torch.load('../critic_models/' + gym_name + '/q_network.pt', map_location=device))
-    V_fun.load_state_dict(torch.load('../critic_models/' + gym_name + '/v_network.pt', map_location=device))
     Q_fun.eval()
-    V_fun.eval()
 
-
-    if model_type == 'pmd':
-        # 需要修改DecisionTransformer模型
-        model = PatchMoEDecision(
-            state_dim=state_dim,
-            act_dim=act_dim,
-            max_length=K,
-            Q_fun=Q_fun,
-            V_fun=V_fun,
-            lambda_param=lambda_param,
-            max_ep_len=max_ep_len,
-            hidden_size=variant['embed_dim'],
-            n_layer=variant['n_layer'],
-            n_inner=4*variant['embed_dim'],
-            activation_function=variant['activation_function'],
-            n_positions=1024,
-            resid_pdrop=variant['dropout'],
-            attn_pdrop=variant['dropout'],
-            device=device,
-        )
-    elif model_type == 'bc':
-        model = MLPBCModel(
-            state_dim=state_dim,
-            act_dim=act_dim,
-            max_length=K,
-            hidden_size=variant['embed_dim'],
-            n_layer=variant['n_layer'],
-        )
-    else:
-        raise NotImplementedError
+    # 3 model init
+    model = Advantage_Decision_ConvMamba(
+        state_dim=state_dim,
+        act_dim=act_dim,
+        max_length=K,
+        Q_fun=Q_fun,
+        lambda_param=lambda_param,
+        max_ep_len=max_ep_len,
+        hidden_size=variant['embed_dim'],
+        n_layer=variant['n_layer'],
+        n_inner=4*variant['embed_dim'],
+        activation_function=variant['activation_function'],
+        n_positions=1024,
+        resid_pdrop=variant['dropout'],
+        attn_pdrop=variant['dropout'],
+        device=device,
+    )
 
     model = model.to(device=device)
-
     warmup_steps = variant['warmup_steps']
     optimizer = torch.optim.AdamW(
         model.parameters(),
@@ -377,42 +284,26 @@ def experiment(
         lambda steps: min((steps+1)/warmup_steps, 1)
     )
 
-    # 打印模型参数信息
-    total_params = sum(p.numel() for p in model.parameters())
-    trainable_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
-    print(f"模型总参数数量: {total_params:,}")
-    print(f"可训练参数数量: {trainable_params:,}")
-    print(f"模型结构:")
-    print(model)
+    # print(f"模型结构:")
+    # print(model)
 
-    if model_type == 'pmd':
-        trainer = SequenceTrainer(
-            model=model,
-            # dataset=dataset_hhh,
-            # dataset_nm = args.dataset_nm,
-            optimizer=optimizer,
-            batch_size=batch_size,
-            K=K,
-            get_batch=get_batch,
-            scheduler=scheduler,
-            loss_fn=lambda s_hat, a_hat, r_hat, s, a, r: torch.mean(torch.mean((a_hat - a)**2)),
-            eval_fns=[eval_episodes(tar) for tar in env_targets],
-            device = device,
-            scale = scale,
-        )
-    elif model_type == 'bc':
-        trainer = ActTrainer(
-            model=model,
-            optimizer=optimizer,
-            K=K,
-            batch_size=batch_size,
-            get_batch=get_batch,
-            scheduler=scheduler,
-            loss_fn=lambda s_hat, a_hat, r_hat, s, a, r: torch.mean((a_hat - a)**2),
-            eval_fns=[eval_episodes(tar) for tar in env_targets],
-        )
+    # 4 trainer init
+    model_path = f'{result_path}/models/{env.spec.id}'
+    trainer = SequenceTrainer(
+        model=model,
+        optimizer=optimizer,
+        batch_size=batch_size,
+        K=K,
+        get_batch=get_batch,
+        scheduler=scheduler,
+        loss_fn=lambda s_hat, a_hat, r_hat, s, a, r: torch.mean(torch.mean((a_hat - a)**2)),
+        eval_fns=[eval_episodes(tar) for tar in env_targets],
+        device = device,
+        scale = scale,
+        model_path = model_path
+    )
 
-    #开始实验
+    # 5 开始实验
     best_iter = -1
     best_ret = -10000
     best_nor_ret = -1000
@@ -424,14 +315,13 @@ def experiment(
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--env', type=str, default='walker2d') #maze2d, kitchen,hopper, walker2d, halfcheetah,hammer,door,pen,antmaze
+    parser.add_argument('--env', type=str, default='walker2d') #maze2d, kitchen,hopper, walker2d, halfcheetah
     parser.add_argument('--dataset', type=str, default='medium-replay')  # medium, medium-replay, medium-expert, expert
     parser.add_argument('--version', type=int, default=2)
     parser.add_argument('--mode', type=str, default='normal')  # normal for standard setting, delayed for sparse
     parser.add_argument('--K', type=int, default=20)
     parser.add_argument('--pct_traj', type=float, default=1.)
     parser.add_argument('--batch_size', type=int, default=64)
-    parser.add_argument('--model_type', type=str, default='pmd')  # dt for decision transformer, bc for behavior cloning
     parser.add_argument('--embed_dim', type=int, default=128)
     parser.add_argument('--n_layer', type=int, default=1)
     parser.add_argument('--activation_function', type=str, default='relu')

@@ -19,8 +19,7 @@ from torch.distributions import MultivariateNormal
 from torch.optim.lr_scheduler import CosineAnnealingLR
 import pyrootutils
 
-# path = pyrootutils.find_root(search_from = __file__, indicator=".aug-project-root")
-path = "C:/Users/24737/Desktop/fsdownload/ADCM_0806"
+path = "../../"
 pyrootutils.set_root(path = path,
                      project_root_env_var = True,
                      dotenv = True,

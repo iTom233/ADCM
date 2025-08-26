@@ -1,26 +1,17 @@
-import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import sys
 sys.path.append('./')
-sys.path.append('C:/Users/24737/Desktop/fsdownload/ADCM_0806/src/models')
-import os
 from typing import List, Optional, Tuple
-import copy
-
-
 import json
 from dataclasses import dataclass
 from typing_extensions import Iterable, NamedTuple, TypeAlias, cast, Union, List, Tuple
-
 from einops import rearrange, repeat
 from torch import LongTensor, Tensor, nn
-
 Device: TypeAlias = Union[str, torch.device, None]
 
 
-#序列建模相关的模块
 # 长期依赖模块
 class long_modeling(nn.Module):
     def __init__(self, embed_dim=128, device='cuda',window_size=10,stride=3):
@@ -29,28 +20,20 @@ class long_modeling(nn.Module):
         self.embed_dim = embed_dim
         self.norm = nn.LayerNorm(self.embed_dim)
         config = Mamba2Config(d_model=self.embed_dim, chunk_size=5, n_layer=3, d_conv=12)
-        # self.mamba2 = Mamba2(config, device=self.device)
         self.mamba2_r = Mamba2(config, device=self.device)
         self.mamba2_s = Mamba2(config, device=self.device)
         self.mamba2_a = Mamba2(config, device=self.device)
         self.window_size = window_size
         self.stride = stride
-        # self.rtg_conv1d = nn.Conv1d(in_channels=self.embed_dim, out_channels=self.embed_dim, kernel_size=self.window_size, groups=self.embed_dim)
-        # self.obs_conv1d = nn.Conv1d(in_channels=self.embed_dim, out_channels=self.embed_dim, kernel_size=self.window_size, groups=self.embed_dim)
-        # self.act_conv1d = nn.Conv1d(in_channels=self.embed_dim, out_channels=self.embed_dim, kernel_size=self.window_size, groups=self.embed_dim)
         self.inter_merge_liner = nn.Linear(3 * embed_dim, embed_dim)
     def forward(self,hidden_states):
-        batch_size, seq_len, embed_dim = hidden_states.size()
-        # Step 1: Apply mamba between patches with causal mask
         padding = (0, 0, 2, 0, 0, 0)
         hidden_states_padding = F.pad(hidden_states, padding, mode='constant', value=0)
         inter_patches = hidden_states_padding.unfold(dimension=1, size=self.stride, step=1)
         inter_patches = inter_patches.reshape(inter_patches.shape[0], inter_patches.shape[1],inter_patches.shape[2]*inter_patches.shape[3])
-       
         hidden_states_inter = self.inter_merge_liner(inter_patches)
-        # hidden_states_inter = hidden_states_inter.unfold(dimension=1, size=self.stride, step=self.stride).permute(0,3,1,2)
         
-        #尝试用三个不同的mamba网络做三种不同的patch序列
+        #用三个不同的mamba网络做三种不同的patch序列
         inter_patch_otput_r = self.mamba2_r(hidden_states_inter[:,0::3])[0]
         inter_patch_otput_s = self.mamba2_s(hidden_states_inter[:,1::3])[0]
         inter_patch_otput_a = self.mamba2_a(hidden_states_inter[:,2::3])[0]
@@ -58,18 +41,9 @@ class long_modeling(nn.Module):
         inter_patch_output = inter_patch_output.permute(2,1,0,3)
         inter_patch_output = inter_patch_output.reshape(inter_patch_output.shape[0]*inter_patch_output.shape[1],inter_patch_output.shape[2],inter_patch_output.shape[3]).permute(1,0,2)
         inter_patch_output = self.norm(inter_patch_output)
-
-        #其实用卷积也是可以的，但是效果会差几分（SSM的筛选机制比卷积更适合捕捉长期依赖）
-        # padded_tensor = torch.nn.functional.pad(hidden_states_inter, (0, 0, self.window_size - 1, 0)).transpose(1, 2)
-        # rtg_conv_tensor = self.rtg_conv1d(padded_tensor)[:, :, ::3]
-        # obs_conv_tensor = self.obs_conv1d(padded_tensor)[:, :, 1::3]
-        # act_conv_tensor = self.act_conv1d(padded_tensor)[:, :, 2::3]
-        # conv_tensor = torch.cat((rtg_conv_tensor.unsqueeze(3), obs_conv_tensor.unsqueeze(3), act_conv_tensor.unsqueeze(3)), dim=3)
-        # conv_tensor = conv_tensor.reshape(conv_tensor.shape[0], conv_tensor.shape[1], -1).transpose(1, 2)
-        # inter_patch_output = self.norm(conv_tensor)
         return inter_patch_output
     
-#短期依赖模块
+# 短期依赖模块
 class short_modeling(nn.Module):
     def __init__(self, embed_dim=128, device='cuda',window_size=3):
         super(short_modeling, self).__init__()
@@ -91,7 +65,8 @@ class short_modeling(nn.Module):
         conv_tensor = conv_tensor.reshape(conv_tensor.shape[0], conv_tensor.shape[1], -1).transpose(1, 2)
         intra_patch_concat = self.norm(conv_tensor)
         return intra_patch_concat
-# 结构性序列建模模块
+
+# 多尺度序列建模模块
 class PatchAttention(nn.Module):
     def __init__(self, embed_dim=128, num_heads=1, patch_size=6,device=None):
         self.device = device
@@ -108,29 +83,20 @@ class PatchAttention(nn.Module):
         self.linear = nn.Linear(embed_dim, embed_dim)
         self.mstf = MSTF(in_channels=self.embed_dim)
         self.long_modeling_1 = long_modeling(device=self.device,window_size=6,embed_dim=self.embed_dim)
-        # self.long_modeling_2 = long_modeling(device=self.device,window_size=6,embed_dim=self.embed_dim)
-        # self.long_modeling_3 = long_modeling(device=self.device,window_size=10)
-        
         self.short_modeling_1 = short_modeling(device=self.device,embed_dim=self.embed_dim)
-        # self.short_modeling_2 = short_modeling(device=self.device,embed_dim=self.embed_dim)
-        # self.short_modeling_3 = short_modeling(device=self.device)
     
     def forward(self, hidden_states):
         batch_size, seq_len, embed_dim = hidden_states.size()
         assert embed_dim == self.embed_dim, "Embedding dimension mismatch"
         # Step 1: Apply mamba between patches with causal mask
         inter_patch_output = self.long_modeling_1(hidden_states)
-        # inter_patch_output = self.long_modeling_2(self.norm(inter_patch_output + hidden_states))
-        # inter_patch_output = self.long_modeling_3(inter_patch_output)
         #Step 2: Apply conv in patches with causal mask
         intra_patch_output = self.short_modeling_1(self.norm(inter_patch_output + hidden_states))
-        # intra_patch_output = self.short_modeling_3(intra_patch_output , stride=3)
         # Step 3: Combine patch-level and patch-inner representations
         combined_output = self.mstf(inter_patch_output,intra_patch_output)
-        combined_output_norm = self.norm_2(combined_output) # Broadcast patch_attn_output to match patch_outputs
+        combined_output_norm = self.norm_2(combined_output) 
         return combined_output_norm
     
-#其他网络模块
 #mamba2模块(捕捉长期依赖)
 @dataclass
 class Mamba2Config:
@@ -153,7 +119,6 @@ class Mamba2Config:
                 self.pad_vocab_size_multiple
                 - self.vocab_size % self.pad_vocab_size_multiple
             )
-
 
 class InferenceCache(NamedTuple):
     conv_state: Tensor  # (batch, d_inner + 2 * d_state, d_conv)
@@ -547,7 +512,7 @@ def silu(x):
     """
     return x * F.sigmoid(x)
 
-#聚合模块
+# 聚合模块
 class MSTF(nn.Module):
     def __init__(self, in_channels):
         super(MSTF, self).__init__()
@@ -565,75 +530,14 @@ class MSTF(nn.Module):
     def forward(self, x0,x1):
         # (B,T,N,C)
         B,T,C = x0.shape
-        x_ = torch.cat([x0,x1],0) # 将多个尺度的输入进行拼接: (B,T,C)--concat--> (M*B,T,C)
-        x__ = x_.reshape(-1,T,B,C) # 对其进行reshape,以便后续计算: (M*B,T,C)--reshape-->(M,T,B,C)
-        x__ = self.project1(x__.permute(0,3,2,1)).permute(0,3,2,1) # 通过一个线性层学习通道之间的相关性: (M,T,B,C)--permute-->(M,C,B,T)--project1-->(M,C,B,T)--permute-->(M,T,B,C)
-        weight = F.softmax(x__, dim=0) # 在M维度上执行softmax,得到每个尺度的权重:(M,T,B,C)
+        x_ = torch.cat([x0,x1],0) 
+        x__ = x_.reshape(-1,T,B,C) 
+        x__ = self.project1(x__.permute(0,3,2,1)).permute(0,3,2,1) 
+        weight = F.softmax(x__, dim=0) 
         # 加权和
-        x_ = x_.reshape(-1,T,B,C)  # 将输入重塑为与weight相同的shape: (M,B,T,C)-->(M,T,B,C)
-        out = (weight * x_).sum(0)  # 每个尺度的权重与对应的输入相乘, 然后将多个尺度的输出相加: (M,T,N*B,C) * (M,T,N*B,C)=(M,T,N*B,C); (M,T,N*B,C)--sum-->(T,N*B,C)
-        out = out.reshape(B,T,C) # (T,N*B,C)-->(B,T,N,C)
+        x_ = x_.reshape(-1,T,B,C)  
+        out = (weight * x_).sum(0)  
+        out = out.reshape(B,T,C) 
         return self.project2(out.permute(0,2,1)).permute(0,2,1)
-
-# 行为模仿模型
-
-class TrajectoryModel(nn.Module):
-    def __init__(self, state_dim, act_dim, max_length=None):
-        super().__init__()
-
-        self.state_dim = state_dim
-        self.act_dim = act_dim
-        self.max_length = max_length
-
-    def forward(self, states, actions, rewards, masks=None, attention_mask=None):
-        # "masked" tokens or unspecified inputs can be passed in as None
-        return None, None, None
-
-    def get_action(self, states, actions, rewards, **kwargs):
-        # these will come as tensors on the correct device
-        return torch.zeros_like(actions[-1])
     
-class MLPBCModel(TrajectoryModel):
 
-    """
-    Simple MLP that predicts next action a from past states s.
-    """
-
-    def __init__(self, state_dim, act_dim, hidden_size, n_layer, dropout=0.1, max_length=1, **kwargs):
-        super().__init__(state_dim, act_dim)
-
-        self.hidden_size = hidden_size
-        self.max_length = max_length
-
-        layers = [nn.Linear(max_length*self.state_dim, hidden_size)]
-        for _ in range(n_layer-1):
-            layers.extend([
-                nn.ReLU(),
-                nn.Dropout(dropout),
-                nn.Linear(hidden_size, hidden_size)
-            ])
-        layers.extend([
-            nn.ReLU(),
-            nn.Dropout(dropout),
-            nn.Linear(hidden_size, self.act_dim),
-            nn.Tanh(),
-        ])
-
-        self.model = nn.Sequential(*layers)
-
-    def forward(self, states, actions, rewards, attention_mask=None, target_return=None):
-
-        states = states[:,-self.max_length:].reshape(states.shape[0], -1)  # concat states
-        actions = self.model(states).reshape(states.shape[0], 1, self.act_dim)
-
-        return None, actions, None
-
-    def get_action(self, states, actions, rewards, **kwargs):
-        states = states.reshape(1, -1, self.state_dim)
-        if states.shape[1] < self.max_length:
-            states = torch.cat(
-                [torch.zeros((1, self.max_length-states.shape[1], self.state_dim),
-                             dtype=torch.float32, device=states.device), states], dim=1)
-        states = states.to(dtype=torch.float32)
-        _, actions, _ = self.forward(states, None, None, **kwargs)
-        return actions[0,-1]

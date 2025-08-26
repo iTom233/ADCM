@@ -3,26 +3,18 @@ from __future__ import annotations
 from functools import partial
 from collections import namedtuple
 from typing import Union, Tuple
-
 import torch
 from torch.nn import Module, ModuleList
 from torch import nn, einsum
 import torch.nn.functional as F
-import copy
-import  numpy as np
-
 from beartype import beartype
-
 import einx
 from einops import rearrange, repeat, reduce, pack, unpack
-
 from colt5_attention import topk as maybe_differentiable_topk
 
 import torch.distributed as dist
 import sys
-sys.path.append('C:/Users/24737/Desktop/fsdownload/ADCM_0806/src/models')
-
-
+sys.path.append('./')
 
 from torch.autograd import Function
 # distributed相关函数 
@@ -735,53 +727,3 @@ class MoE(Module):
             total_aux_loss = None
 
         return MixtureOfExpertsReturn(output_merge,output_all_experts, total_aux_loss)
-
-# sparse moe block
-# in particular, they found that adding a feedforward before or after greatly stabilized the training and improved results
-
-class SparseMoEBlock(Module):
-
-    @beartype
-    def __init__(
-        self,
-        moe: MoE,
-        *,
-        add_ff_before = False,
-        add_ff_after = True
-    ):
-        super().__init__()
-        dim = moe.dim
-
-        self.moe = moe
-        self.moe_prenorm = RMSNorm(dim)
-
-        self.ff_before = Expert(dim, prenorm = True) if add_ff_before else None
-        self.ff_after = Expert(dim, prenorm = True) if add_ff_after else None
-
-    def forward(
-        self,
-        x,
-        noise_gates = False,
-        noise_mult = 1.
-    ):
-
-        # feedforward before
-
-        if exists(self.ff_before):
-            x = self.ff_before(x) + x
-
-        # mixture of experts layer
-
-        residual = x
-
-        moe_out,moe_outputs_repeat, total_aux_loss, Adv_value = self.moe(self.moe_prenorm(x), noise_gates = noise_gates, noise_mult = noise_mult)
-
-        x = moe_out + residual
-        x_repeat = moe_outputs_repeat + residual.unsqueeze(1).repeat(1, 16, 1, 1)
-
-        # feedforward after
-
-        if exists(self.ff_after):
-            x = self.ff_after(x) + x
-
-        return MixtureOfExpertsReturn(x, total_aux_loss, Adv_value)

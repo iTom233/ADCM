@@ -4,11 +4,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
 from tqdm import tqdm, trange
-from typing import Optional, Sequence, Tuple, List
-from torch.utils.data import DataLoader, WeightedRandomSampler
 import time
 
-#PMD
+# ADCM
 class SequenceTrainer():
     def __init__(self, 
             model, optimizer, 
@@ -17,9 +15,11 @@ class SequenceTrainer():
             loss_fn,
             scheduler=None, 
             eval_fns=None,
+            model_path = None,
             device = 'cuda:1',
             scale = 1000,
     ):
+        self.model_path = model_path
         self.model = model
         self.optimizer = optimizer
         self.batch_size = batch_size
@@ -31,7 +31,6 @@ class SequenceTrainer():
         self.diagnostics = dict()
 
         self.start_time = time.time()
-        #创建数据集
         self.device = device
         self.reward_scale = scale
 
@@ -43,28 +42,18 @@ class SequenceTrainer():
 
         train_start = time.time()
 
-        #序列建模 训练阶段
+        # 训练阶段
         self.model.train()
         for _ in trange(num_steps, desc="Epoch", leave=False):
             train_loss = self.train_step()
             train_losses.append(train_loss)
             if self.scheduler is not None:
                 self.scheduler.step()
-        # last_attention = attention_mat[2].detach().cpu().numpy()
-        # #绘图attention        
-        # for i , mat in enumerate(last_attention[0:8,0,:,:]):
-        #     plt.figure(figsize=(10, 8))
-        #     sns.heatmap(mat, annot=False, cmap='viridis', fmt=".2f")
-        #     plt.title("Attention Heatmap")
-        #     plt.xlabel("Key Sequence")
-        #     plt.ylabel("Query Sequence")
-        #     plt.show()
         logs['time/training'] = time.time() - train_start
 
         eval_start = time.time()
+
         # 推理阶段
-        if iter_num > 1:
-            print('hhh')
         self.model.eval()
         for eval_fn in self.eval_fns:
             outputs = eval_fn(self.model)
@@ -81,12 +70,12 @@ class SequenceTrainer():
 
         for k, v in logs.items():
             if 'return_mean' in k:
-                # best_ret = max(best_ret, float(v))
                 best_ret, best_iter = max((best_ret,best_iter), (float(v), iter_num))
             if 'normalized_score' in k:
                 if max(best_nor_ret, float(v)) != best_nor_ret:
-                    torch.save(self.model.state_dict(), f'../save\model_weight\walker2d-medium-replay-v2/best_model_iter_{iter_num}_score_{max(best_nor_ret, float(v)):.3f}.pt')
-                    print(f'Best model saved for iteration {iter_num}')  
+                    model_dir = f'{self.model_path}-score-{max(best_nor_ret, float(v)):.3f}.pt'
+                    torch.save(self.model.state_dict(), model_dir)
+                    print(f'Best model saved to {model_dir}')  
                 best_nor_ret = max(best_nor_ret, float(v))
         logs['-' * 40 + 'Best_Iteration'] = best_iter
         logs['Best_return_mean'] = best_ret
@@ -99,7 +88,6 @@ class SequenceTrainer():
             logger.log(f'Iteration {iter_num}')
             for k, v in logs.items():
                 logger.log(f'{k}: {v}')
-                # print(f'{k}: {v}')
 
         return logs,best_iter,best_ret,best_nor_ret
 
@@ -120,12 +108,6 @@ class SequenceTrainer():
             None, action_preds, None,
             None, action_target, None,
         )*1 + 0.05*total_aux_loss
-        
-        # #不加MOE负载均衡的loss
-        # loss = self.loss_fn(
-        #     None, action_preds, None,
-        #     None, action_target, None,
-        # )
 
         self.optimizer.zero_grad()
         loss.backward()
@@ -134,118 +116,6 @@ class SequenceTrainer():
 
         with torch.no_grad():
             self.diagnostics['training/action_error'] = torch.mean((action_preds-action_target)**2).detach().cpu().item()
-
-        return loss.detach().cpu().item()
-
-#BC    
-class ActTrainer():
-    def __init__(self, 
-        model, optimizer, 
-        batch_size, get_batch, 
-        K,
-        loss_fn,
-        scheduler=None, 
-        eval_fns=None,
-        device = 'cuda:1',
-        scale = 1000,
-    ):
-        self.model = model
-        self.optimizer = optimizer
-        self.batch_size = batch_size
-        self.step_len = K
-        self.get_batch = get_batch
-        self.loss_fn = loss_fn
-        self.scheduler = scheduler
-        self.eval_fns = [] if eval_fns is None else eval_fns
-        self.diagnostics = dict()
-
-        self.start_time = time.time()
-        #创建数据集
-        self.device = device
-        self.reward_scale = scale
-
-    def train_iteration(self, num_steps, iter_num=0,best_iter=0,best_ret=-1000,
-    best_nor_ret=-100, logger=None, print_logs=False):
-
-        train_losses = []
-        logs = dict()
-
-        train_start = time.time()
-
-        #序列建模 训练阶段
-        self.model.train()
-        for _ in trange(num_steps, desc="Epoch", leave=False):
-            train_loss = self.train_step()
-            train_losses.append(train_loss)
-            if self.scheduler is not None:
-                self.scheduler.step()
-        # last_attention = attention_mat[2].detach().cpu().numpy()
-        # #绘图attention        
-        # for i , mat in enumerate(last_attention[0:8,0,:,:]):
-        #     plt.figure(figsize=(10, 8))
-        #     sns.heatmap(mat, annot=False, cmap='viridis', fmt=".2f")
-        #     plt.title("Attention Heatmap")
-        #     plt.xlabel("Key Sequence")
-        #     plt.ylabel("Query Sequence")
-        #     plt.show()
-        logs['time/training'] = time.time() - train_start
-
-        eval_start = time.time()
-        # 推理阶段
-        self.model.eval()
-        for eval_fn in self.eval_fns:
-            outputs = eval_fn(self.model)
-            for k, v in outputs.items():
-                logs[f'evaluation/{k}'] = v
-
-        logs['time/total'] = time.time() - self.start_time
-        logs['time/evaluation'] = time.time() - eval_start
-        logs['training/train_loss_mean'] = np.mean(train_losses)
-        logs['training/train_loss_std'] = np.std(train_losses)
-
-        for k in self.diagnostics:
-            logs[k] = self.diagnostics[k]
-
-        for k, v in logs.items():
-            if 'return_mean' in k:
-                # best_ret = max(best_ret, float(v))
-                best_ret, best_iter = max((best_ret,best_iter), (float(v), iter_num))
-            if 'normalized_score' in k:
-                best_nor_ret = max(best_nor_ret, float(v))
-        logs['-' * 40 + 'Best_Iteration'] = best_iter
-        logs['Best_return_mean'] = best_ret
-        logs['Best_normalized_score'] = best_nor_ret     
-
-        if print_logs:
-            print('=' * 80)
-            print(f'Iteration {iter_num}')
-            logger.log('=' * 80)
-            logger.log(f'Iteration {iter_num}')
-            for k, v in logs.items():
-                logger.log(f'{k}: {v}')
-                # print(f'{k}: {v}')
-
-        return logs,best_iter,best_ret,best_nor_ret
-
-    def train_step(self):
-        states, actions, rewards, dones, rtg, _, attention_mask = self.get_batch(self.batch_size)
-        state_target, action_target, reward_target = torch.clone(states), torch.clone(actions), torch.clone(rewards)
-
-        state_preds, action_preds, reward_preds = self.model.forward(
-            states, actions, rewards, attention_mask=attention_mask, target_return=rtg[:,0],
-        )
-
-        act_dim = action_preds.shape[2]
-        action_preds = action_preds.reshape(-1, act_dim)
-        action_target = action_target[:,-1].reshape(-1, act_dim)
-
-        loss = self.loss_fn(
-            state_preds, action_preds, reward_preds,
-            state_target, action_target, reward_target,
-        )
-        self.optimizer.zero_grad()
-        loss.backward()
-        self.optimizer.step()
 
         return loss.detach().cpu().item()
 
