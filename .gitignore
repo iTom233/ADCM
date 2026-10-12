@@ -1,1 +1,11 @@
- 
+# Third-party dependency source code (not tracked; install separately, see README)
+D4RL-master/
+mjrl-master/
+mujoco-py/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Local temporary files
+_paper_text.txt
